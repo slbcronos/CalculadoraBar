@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CalculadoraBar.MainPage">
+
+    
+     <TableView Intent="Form">
+        
+        
+
+        <TableSection Title="DATOS" TextColor="Red">
+
+            <EntryCell x:Name="txtTotal" 
+                       Label="Total" 
+                       Placeholder="$0.0">
+            </EntryCell>
+
+            <EntryCell x:Name="txtPropina" 
+                       Label="Propina (%)">
+            </EntryCell>
+            
+            <EntryCell x:Name="txtNoPersonas" 
+                       Label="# de Personas">          
+            </EntryCell>
+
+        </TableSection>
+
+
+        <TableSection >
+            <ViewCell>
+                <StackLayout >
+                    <Button x:Name="cmdCalcular" Text="Calcular" Clicked="cmdCalcular_Clicked"></Button>
+                </StackLayout>
+            </ViewCell>
+
+        </TableSection>
+
+        <TableSection Title="RESULTADO" TextColor="Red">
+            <TextCell x:Name="lblPropina" Text="Propina: " Detail="$0.0"></TextCell>
+            <TextCell x:Name="lblTotal" Text="Total: " Detail="$0.0"></TextCell>
+            <TextCell x:Name="lblPropinaPorPersona" Text="Propina X Persona" Detail="$0.0" ></TextCell>
+            <TextCell x:Name="lblTotalPorPersona" Text="Total X Persona" Detail="$0.0" DetailColor="#FF0000"></TextCell>
+            <ViewCell>
+                <StackLayout>
+                    <Label x:Name="TotalTotal" Text="Total: $ " FontSize="Medium" TextColor="Red" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" ></Label>
+                </StackLayout>
+            </ViewCell>
+            
+        </TableSection>
+                  
+        
+     </TableView>
+    
+
+</ContentPage>
